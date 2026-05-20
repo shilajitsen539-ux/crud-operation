@@ -1,0 +1,251 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+    /* Futuristic Background */
+    background:
+    radial-gradient(circle at top left, #00f7ff33, transparent 30%),
+    radial-gradient(circle at bottom right, #ff00ff22, transparent 30%),
+    linear-gradient(135deg, #050816, #0b1026, #02040f);
+
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Main Container */
+.main{
+    width: 100%;
+    max-width: 950px;
+    padding: 30px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.2),
+    0 0 40px rgba(255,0,255,0.12);
+
+    animation: glow 5s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow{
+    from{
+        box-shadow:
+        0 0 20px rgba(0,255,255,0.25),
+        0 0 40px rgba(255,0,255,0.15);
+    }
+    to{
+        box-shadow:
+        0 0 30px rgba(0,255,255,0.45),
+        0 0 70px rgba(255,0,255,0.3);
+    }
+}
+
+/* Heading */
+h3{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+
+    background: linear-gradient(90deg,#00f7ff,#ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form */
+form{
+    margin-bottom: 35px;
+}
+
+form p{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+/* Labels */
+label{
+    font-size: 15px;
+    color: #cfcfff;
+    letter-spacing: 1px;
+}
+
+/* Inputs */
+input{
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input::placeholder{
+    color: rgba(255,255,255,0.45);
+}
+
+input:focus{
+    border-color: #00f7ff;
+
+    box-shadow:
+    0 0 12px #00f7ff88,
+    0 0 24px #00f7ff33;
+
+    transform: scale(1.02);
+}
+
+/* Button */
+button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg,#00f7ff,#8f00ff,#ff00ff);
+    background-size: 300% 300%;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: 0.4s;
+
+    box-shadow:
+    0 0 15px rgba(0,255,255,0.4);
+}
+
+button:hover{
+    transform: translateY(-3px) scale(1.02);
+
+    background-position: right center;
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,0.6),
+    0 0 40px rgba(255,0,255,0.3);
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(10px);
+}
+
+thead{
+    background: linear-gradient(90deg,#00f7ff33,#ff00ff33);
+}
+
+th{
+    padding: 16px;
+    color: #00f7ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+td{
+    padding: 14px;
+    text-align: center;
+    color: #e6e6ff;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+tbody tr{
+    transition: 0.3s;
+}
+
+tbody tr:hover{
+    background: rgba(255,255,255,0.08);
+    transform: scale(1.01);
+}
+
+/* Scroll for Mobile */
+.table-wrapper{
+    overflow-x: auto;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .main{
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    input{
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+
+    button{
+        padding: 13px;
+        font-size: 15px;
+    }
+
+    table{
+        font-size: 13px;
+    }
+
+    th, td{
+        padding: 10px;
+    }
+}
+
+@media(max-width:480px){
+
+    body{
+        padding: 12px;
+    }
+
+    .main{
+        padding: 18px;
+    }
+
+    h3{
+        font-size: 1.3rem;
+    }
+
+    th, td{
+        font-size: 12px;
+        padding: 8px;
+    }
+}
